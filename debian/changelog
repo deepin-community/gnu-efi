@@ -1,3 +1,19 @@
+gnu-efi (3.0.18-1) unstable; urgency=medium
+
+  * Strip LDFLAGS before passing to the build
+  * Add loong64 to arch list (Closes: #1025787)
+  * Correctly set the PREFIX for the build
+  * Add myself to uploaders
+  * Drop unnecessary binutils build dep (Closes: #1032501)
+
+ -- Mario Limonciello <superm1@gmail.com>  Mon, 25 Mar 2024 14:50:29 -0500
+
+gnu-efi (3.0.15-1) unstable; urgency=medium
+
+  * New upstream version 3.0.15
+
+ -- Julian Andres Klode <jak@debian.org>  Fri, 27 Jan 2023 21:24:25 +0100
+
 gnu-efi (3.0.13+git20210716.269ef9d-2) unstable; urgency=medium
 
   * Upload to unstable

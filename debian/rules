@@ -42,9 +42,11 @@ ifneq (,$(COMPAT_ARCH))
 endif
 
 override_dh_auto_build:
-	$(MAKE) ARCH=$(HOST_ARCH)
+	LDFLAGS="${LDFLAGS//-Wl/}" && LDFLAGS="${LDFLAGS//,/ }" && \
+	$(MAKE) ARCH=$(HOST_ARCH) PREFIX=/usr
 ifneq (,$(COMPAT_ARCH))
-		$(MAKE) ARCH=$(COMPAT_ARCH) HOSTARCH=$(BUILD_ARCH)
+		LDFLAGS="${LDFLAGS//-Wl/}" && LDFLAGS="${LDFLAGS//,/ }" && \
+		$(MAKE) ARCH=$(COMPAT_ARCH) HOSTARCH=$(BUILD_ARCH) PREFIX=/usr
 endif
 
 # Fixme: This somehow rebuilds some parts
