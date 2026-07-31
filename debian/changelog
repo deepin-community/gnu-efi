@@ -1,3 +1,9 @@
+gnu-efi (3.0.18-1+deb13u1) trixie; urgency=medium
+
+  * Backport "ARM32: Split headers and code" (Closes: #1086705)
+
+ -- Bastian Germann <bage@debian.org>  Wed, 07 Jan 2026 23:10:37 +0100
+
 gnu-efi (3.0.18-1) unstable; urgency=medium
 
   * Strip LDFLAGS before passing to the build
